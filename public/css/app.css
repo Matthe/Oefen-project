@@ -10655,6 +10655,13 @@ a.text-dark:focus {
   }
 }
 
+#footer {
+  margin-top: 30px;
+  padding: 20px;
+  color: #fff;
+  background: #333;
+}
+
 .row {
   padding: 1.5rem 1.5rem;
 }
