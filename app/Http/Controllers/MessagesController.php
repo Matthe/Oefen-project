@@ -13,6 +13,22 @@ class MessagesController extends Controller
     		'email' => 'required'
     	]);
 
-    	return 'SUCCES';
+    	// Create new message
+    	$message = new Message;
+    	$message->name = $request->input('name');
+    	$message->email = $request->input('email');
+    	$message->message = $request->input('message');
+
+    	// Save message
+    	$message->save();
+
+    	// Redirect
+    	return redirect('/')->with('success', 'Message Sent');
+    }
+
+    public function getMessages(){
+    	$messages = Message::all();
+
+    	return view('messages')->with('messages', $messages);
     }
 }
