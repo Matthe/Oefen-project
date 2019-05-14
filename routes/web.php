@@ -22,5 +22,11 @@ Route::get('/about', 'PagesController@getAbout');
 Route::get('/contact', 'PagesController@getContact');
 
 Route::get('/messages', 'MessagesController@getMessages');
-
 Route::post('/contact/submit', 'MessagesController@submit');
+
+Route::get('/register', 'RegistrationController@create');
+Route::post('/register', 'RegistrationController@store');
+
+Route::get('/login', 'SessionsController@create');
+Route::post('/login', 'SessionsController@store');
+Route::get('/logout', 'SessionsController@destroy');

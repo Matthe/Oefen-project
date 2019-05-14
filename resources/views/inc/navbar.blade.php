@@ -16,6 +16,9 @@
         <li class="{{Request::is('contact') ? 'active' : ''}}">
           <a class="nav-link" href="/contact">Contact</a>
         </li>
+        <li class="{{Request::is('register') ? 'active' : ''}}">
+          <a class="nav-link" href="/register">Register</a>
+        </li>
       </ul>
     </div>
   </div>
