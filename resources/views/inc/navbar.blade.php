@@ -7,6 +7,11 @@
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
+        @if( auth()->check())
+          <li class="nav-item">
+            <a class="nav-link" href="#">{{ auth()->user()->name}}</a>
+          </li>
+        @endif
         <li class="{{Request::is('/') ? 'active' : ''}}">
           <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
         </li>
