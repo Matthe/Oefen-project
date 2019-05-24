@@ -7,11 +7,6 @@
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
-        @if( auth()->check())
-          <li class="nav-item">
-            <a class="nav-link" href="#">{{ auth()->user()->name}}</a>
-          </li>
-        @endif
         <li class="{{Request::is('/') ? 'active' : ''}}">
           <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
         </li>
@@ -21,10 +16,26 @@
         <li class="{{Request::is('contact') ? 'active' : ''}}">
           <a class="nav-link" href="/contact">Contact</a>
         </li>
-        <li class="{{Request::is('register') ? 'active' : ''}}">
-          <a class="nav-link" href="/register">Register</a>
-        </li>
       </ul>
+      <form class="form-inline" my-2 my-md-0>
+        <ul class="navbar-nav">
+          @if( auth()->check())
+            <li class="nav-item" >
+              <a class="nav-link" href="#">{{ auth()->user()->name}}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">Log Out</a>
+            </li>
+          @else
+            <li class="{{Request::is('login') ? 'active' : ''}}" >
+              <a class="nav-link" href="/login">Log In</a>
+            </li>
+            <li class="{{Request::is('register') ? 'active' : ''}}">
+              <a class="nav-link" href="/register">Register</a>
+            </li>
+          @endif
+        </ul>
+      </form>
     </div>
   </div>
 </nav>
