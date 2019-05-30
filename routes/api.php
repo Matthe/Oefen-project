@@ -16,3 +16,11 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get("/",function(){
+	$url = urlencode("https://api.twitch.tv/mrjacobshc/clips");
+
+	$json = json_decode(file_get_contents($url), true);
+
+	dd($json);
+});
