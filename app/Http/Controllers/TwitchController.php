@@ -9,8 +9,10 @@ class TwitchController extends Controller
 {
     public function index()
     {
-    	$data = User::all();
+    	$client = new Client();
+		$api_response = $client->get('https://api.twitch.tv/mrjacobshc/clips');
+		$response = json_decode($api_response);
 
-    	return $data;
+		return view('/', compact('response'));
     }
 }
