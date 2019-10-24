@@ -22,5 +22,5 @@ Route::get("/",function(){
 
 	$json = json_decode(file_get_contents($url), true);
 
-	dd($json);
+	
 });

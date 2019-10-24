@@ -3,18 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use GuzzleHttp\Client;
 use App\Http\Requests;
-use GuzzleHttp\Message\Request;
-use GuzzleHttp\Message\Response;
 
 class PagesController extends Controller
 {
     public function getHome(){
 
-        $client = new Client();
-        $api_response = $client->get('https://api.twitch.tv/mrjacobshc/clips');
-        $response = json_decode($api_response);
+        $data = "";/*file_get_contents('https://api.twitch.tv/mrjacobshc/clips'); */
+        $response = json_decode($data, true);
 
         return view('home', compact('response'));
     }
