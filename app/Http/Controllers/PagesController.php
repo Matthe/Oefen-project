@@ -26,4 +26,8 @@ class PagesController extends Controller
     public function getRegister(){
     	return view('registration.create');
     }
+
+    public function getProfile(){
+        return view('profile');
+    }
 }

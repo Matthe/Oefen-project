@@ -3,6 +3,7 @@
 <head>
 	<title>Mijn site</title>
 	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
 	@include('inc.navbar')
