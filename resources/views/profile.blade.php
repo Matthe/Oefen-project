@@ -14,7 +14,7 @@
 				</p>
 
 			</div>
-			<div class="col-sm-7">
+			<div class="col-sm-8">
 				{{-- Username --}}
 				<h3>
 					{{ Auth::user()-> name}}
