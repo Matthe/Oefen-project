@@ -1,3 +1,16 @@
 .profile-image{
 	width: 150px;
+	background-color: rgba(0,0,0, 0.3);
+}
+
+.social-media-links{
+	font-size: 24pt;
+}
+
+.social-media-links a{
+	color: #666;
+}
+
+.social-media-links a:hover{
+	color: #444;
 }
