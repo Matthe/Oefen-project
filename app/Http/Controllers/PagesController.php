@@ -12,15 +12,15 @@ class PagesController extends Controller
         $data = "";/*file_get_contents('https://api.twitch.tv/mrjacobshc/clips'); */
         $response = json_decode($data, true);
 
-        return view('home', compact('response'));
+        return view('pages.home', compact('response'));
     }
 
     public function getAbout(){
-    	return view('about');
+    	return view('pages.about');
     }
 
     public function getContact(){
-    	return view('contact');
+    	return view('pages.contact');
     }
 
     public function getRegister(){
@@ -28,6 +28,6 @@ class PagesController extends Controller
     }
 
     public function getProfile(){
-        return view('profile');
+        return view('pages.profile');
     }
 }
