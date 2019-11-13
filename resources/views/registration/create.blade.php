@@ -5,7 +5,7 @@
     <form method="POST" action="/register">
         {{ csrf_field() }}
         <div class="form-group">
-            <label for="name">Name:</label>
+            <label for="name">Username:</label>
             <input type="text" class="form-control" id="name" name="name">
         </div>
  
