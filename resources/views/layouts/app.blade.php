@@ -13,15 +13,8 @@
 		@if(Request::is('/'))
 			@include('inc.showcase')
 		@endif
-		<div class="row">
-			<div class="col-md-10 col-lg-10">
-				@include('inc.messages')
-				@yield('content')
-			</div>
-			<div class="col-md-2 col-lg-2">
-				@include('inc.sidebar')
-			</div>
-		</div>
+		@include('inc.messages')
+		@yield('content')
 	</div>
 
 	<footer id="footer" class="text-center">

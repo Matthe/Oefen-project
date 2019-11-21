@@ -8,10 +8,6 @@ use App\Http\Requests;
 class PagesController extends Controller
 {
     public function getHome(){
-
-        $data = "";/*file_get_contents('https://api.twitch.tv/mrjacobshc/clips'); */
-        $response = json_decode($data, true);
-
         return view('pages.home', compact('response'));
     }
 
