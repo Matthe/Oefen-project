@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Mijn site @yield('title')</title>
-	<link rel="stylesheet" href="css/app.css">
-	<link rel="stylesheet" href="css/custom.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-</head>
+@include('partials._head');
 <body>
-	@include('inc.navbar')
+	@include('partials._navbar')
 
 	<div class="container">
 		@if(Request::is('/'))
-			@include('inc.showcase')
+			@include('partials.showcase')
 		@endif
-		@include('inc.messages')
+		@include('partials.messages')
 		@yield('content')
 	</div>
 
