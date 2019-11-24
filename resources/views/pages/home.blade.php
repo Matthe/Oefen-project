@@ -47,7 +47,7 @@
 			<hr>
 		</div>
 		<div class="col-md-3 col-md-offset-1">
-			@include('partials.sidebar')
+			@include('partials._sidebar')
 		</div>
 	</div>
 	

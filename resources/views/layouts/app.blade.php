@@ -4,14 +4,12 @@
 
 	<div class="container">
 		@if(Request::is('/'))
-			@include('partials.showcase')
+			@include('partials._showcase')
 		@endif
-		@include('partials.messages')
+		@include('partials._messages')
 		@yield('content')
 	</div>
 
-	<footer id="footer" class="text-center">
-		<p>Copyright 2019 &copy; Mijn site</p>
-	</footer>
+	@include('partials._footer')
 </body>
 </html>
