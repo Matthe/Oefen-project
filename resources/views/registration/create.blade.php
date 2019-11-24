@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', ' | Register')
+
 @section('content')
 <div class="row">
     <div class="col-md-12">
