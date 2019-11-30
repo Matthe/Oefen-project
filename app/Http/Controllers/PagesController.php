@@ -8,7 +8,7 @@ use App\Http\Requests;
 class PagesController extends Controller
 {
     public function getHome(){
-        return view('pages.home', compact('response'));
+        return view('pages.home');
     }
 
     public function getAbout(){
