@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', ' | Profile')
+
 @section('content')
 	<div class="col-sm-10">
 		<div class="row">
@@ -26,6 +28,7 @@
 				{{-- Voorbeeld profile --}}
 				Profile information
 				<div class="card">
+					<img src="img.jpg" alt="John" style="width:100%">
 					<h1>John Doe</h1>
 					<p class="title">CEO & Founder, Example</p>
 					<p>Harvard University</p>
