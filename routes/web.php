@@ -11,26 +11,22 @@
 |
 */
 
-/*
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['middleware' => ['web']], function () {
+	Route::get('/', 'PagesController@getHome');
+	Route::get('/about', 'PagesController@getAbout');
+	Route::get('/contact', 'PagesController@getContact');
+	Route::get('/register', 'PagesController@getRegister');
+	Route::get('/profile', 'PagesController@getProfile');
+
+	Route::get('/messages', 'MessagesController@getMessages');
+	Route::post('/contact/submit', 'MessagesController@submit');
+
+	Route::get('/register', 'RegistrationController@create');
+	Route::post('/register', 'RegistrationController@store');
+
+	Route::get('/login', 'SessionsController@create');
+	Route::post('/login', 'SessionsController@store');
+	Route::get('/logout', 'SessionsController@destroy');
+
+	Route::resource('posts', 'PostController');
 });
-*/
-
-Route::get('/', 'PagesController@getHome');
-Route::get('/about', 'PagesController@getAbout');
-Route::get('/contact', 'PagesController@getContact');
-Route::get('/register', 'PagesController@getRegister');
-Route::get('/profile', 'PagesController@getProfile');
-
-Route::get('/messages', 'MessagesController@getMessages');
-Route::post('/contact/submit', 'MessagesController@submit');
-
-Route::get('/register', 'RegistrationController@create');
-Route::post('/register', 'RegistrationController@store');
-
-Route::get('/login', 'SessionsController@create');
-Route::post('/login', 'SessionsController@store');
-Route::get('/logout', 'SessionsController@destroy');
-
-Route::resource('posts', 'PostController');
