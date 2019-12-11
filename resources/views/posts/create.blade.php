@@ -17,7 +17,7 @@
 				<!-- form-control is een bootstrap ding zodat de form er mooier uitziet & required is parsley validatie -->
 				{{ Form::text('title', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '255')) }}
 
-				{{ Form::label('body', 'Post Body:')}}
+				{{ Form::label('body', 'Post Body:', ['class' => 'form-spacing-top'])}}
 				{{ Form::textarea('body', null, array('class' => 'form-control', 'required' => '')) }}
 
 				{{ Form::submit('Create Post', array('class' => 'btn btn-success btn-lg btn-block', 'style' => 'margin-top: 20px')) }}
