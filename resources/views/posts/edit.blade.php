@@ -6,7 +6,7 @@
 
 	<div class="row">
 		<div class="col-md-8">
-			{!! Form::model($post, ['route' => ['posts.update', $post->id]]) !!}
+			{!! Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'PUT']) !!}
 				{{ Form::label('title', 'Title:')}}
 				{{ Form::text('title', null, ['class'=> 'form-control'] )}}
 
@@ -32,7 +32,7 @@
 						{!! Html::linkRoute('posts.show', 'Cancel', array($post->id), array('class' => 'btn btn-danger btn-block')) !!}
 					</div>
 					<div class="col-md-6">
-						{!! Html::linkRoute('posts.update', 'Save', array($post->id), array('class' => 'btn btn-success btn-block')) !!}
+						{{ Form::submit('Save Edit', ['class' => 'btn btn-success btn-block']) }}
 					</div>
 				</div>
 			</div>
