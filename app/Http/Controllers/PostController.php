@@ -100,8 +100,8 @@ class PostController extends Controller
         // Save data to the database
         $post = Post::find($id);
 
-        $post->title = $request->input('title');
-        $post->body  = $request->input('body');
+        $post->title = $request->title;
+        $post->body  = $request->body;
 
         $post->save();
 
@@ -110,7 +110,6 @@ class PostController extends Controller
 
         // Redirect with flash data to posts.show
         return redirect()->route('posts.show', $post->id);
-
     }
 
     /**
@@ -121,6 +120,12 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+
+        $post->delete();
+
+        Session::flash('success', 'Post successfully deleted');
+
+        return redirect()->route('posts.index');
     }
 }
