@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Pagination\LengthAwarePaginator;
 use App\Post;
 use Session;
 
@@ -16,7 +17,7 @@ class PostController extends Controller
     public function index()
     {   
         //Grab all the posts
-        $posts = Post::all();
+        $posts = Post::orderBy('id', 'desc')->paginate(5);
 
         return view('posts.index')->withPosts($posts);
     }

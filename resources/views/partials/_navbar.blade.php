@@ -10,6 +10,9 @@
         <li class="{{Request::is('/') ? 'active' : ''}}">
           <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
         </li>
+        <li class="{{Request::is('posts') ? 'active' : ''}}">
+          <a class="nav-link" href="/posts">Posts</a>
+        </li>
         <li class="{{Request::is('about') ? 'active' : ''}}">
           <a class="nav-link" href="/about">About</a>
         </li>
