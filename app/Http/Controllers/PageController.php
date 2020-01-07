@@ -4,11 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use App\Post;
 
 class PageController extends Controller
 {
     public function getHome(){
-        return view('pages.home');
+        //Waarschijnlijk is deze pagina van een andere tutorial. Kijk maar of je het hier in kan maken
+        $posts = Post::orderBy('created_at', 'desc')->limit(4)->get();
+        return view('pages.home')->withPosts($posts);
     }
 
     public function getAbout(){

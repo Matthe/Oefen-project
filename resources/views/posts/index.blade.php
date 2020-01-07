@@ -7,8 +7,6 @@
 	<div class="row">
 		<div class="col-md-10">
 			<h1>All posts</h1>
-
-
 		</div>
 
 		<div class="col-md-2">
